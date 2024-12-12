@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- viewport-fit=cover for iOS full height -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Emoji Planner</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Clouds Background -->
+  <div class="clouds" aria-hidden="true">
+    <div class="clouds-row clouds-row1"></div>
+    <div class="clouds-row clouds-row2"></div>
+    <div class="clouds-row clouds-row3"></div>
+  </div>
+
+  <header>
+    <h1>Emoji Planner</h1>
+    <!-- Reset button centered between title and time -->
+    <button class="reset-alles-btn" aria-label="Reset all placeholders">reset alles</button>
+    <div class="time-display" aria-label="Current time"></div>
+  </header>
+
+  <section class="day-sections" aria-label="Day time sections">
+    <div class="section-block" aria-label="Ochtend section">
+      <h2>Ochtend</h2>
+      <div class="placeholder-row">
+        <div class="placeholder empty" aria-label="Empty placeholder" tabindex="0"></div>
+        <button class="add-btn" aria-label="Add new placeholder">+</button>
+      </div>
+    </div>
+    <div class="section-block" aria-label="Middag section">
+      <h2>Middag</h2>
+      <div class="placeholder-row">
+        <div class="placeholder empty" aria-label="Empty placeholder" tabindex="0"></div>
+        <button class="add-btn" aria-label="Add new placeholder">+</button>
+      </div>
+    </div>
+    <div class="section-block" aria-label="Avond section">
+      <h2>Avond</h2>
+      <div class="placeholder-row">
+        <div class="placeholder empty" aria-label="Empty placeholder" tabindex="0"></div>
+        <button class="add-btn" aria-label="Add new placeholder">+</button>
+      </div>
+    </div>
+  </section>
+
+  <button class="huiswerk-btn" aria-label="Toggle huiswerk mode">Huiswerk</button>
+
+  <div class="search-container" aria-label="Search and filter emojis">
+    <input type="text" class="search-bar" placeholder="Search emojis..." aria-label="Search emojis by name"/>
+  </div>
+
+  <nav class="category-nav" aria-label="Emoji categories">
+    <!-- Categories in order: Events, Emotion, Travel, Art, Tech, Objects, Animals, Houses -->
+    <button class="cat-btn" data-category="events" aria-label="Show event emojis" tabindex="0">Events</button>
+    <button class="cat-btn" data-category="emotion" aria-label="Show emotion emojis" tabindex="0">Emotion</button>
+    <button class="cat-btn" data-category="travel" aria-label="Show travel emojis" tabindex="0">Travel</button>
+    <button class="cat-btn" data-category="art" aria-label="Show art emojis" tabindex="0">Art</button>
+    <button class="cat-btn" data-category="tech" aria-label="Show tech emojis" tabindex="0">Tech</button>
+    <button class="cat-btn" data-category="objects" aria-label="Show object emojis" tabindex="0">Objects</button>
+    <button class="cat-btn" data-category="animals" aria-label="Show animal emojis" tabindex="0">Animals</button>
+    <button class="cat-btn" data-category="houses" aria-label="Show house emojis" tabindex="0">Houses</button>
+  </nav>
+
+  <main aria-label="Emoji deck">
+    <div class="emoji-deck" aria-live="polite"></div>
+  </main>
+
+  <!-- Reward Popup (for Huiswerk toggling) -->
+  <div class="reward-popup">
+    <div class="reward-content">
+      <div class="reward-text">Good Job!</div>
+      <div class="reward-emoji">🎂</div>
+      <div class="reward-confetti"></div>
+    </div>
+  </div>
+
+  <!-- Huiswerk verification badge container -->
+  <div class="huiswerk-badge-container" aria-hidden="true">
+    <span class="huiswerk-badge">🔵</span>
+  </div>
+
+  <!-- Initial Tutorial Popup -->
+  <div class="tutorial-popup">
+    <div class="tutorial-content">
+      <h2 class="tutorial-title">Welcome to Emoji Planner!</h2>
+      <p class="tutorial-step">👻 This ghost will show you how to drag and drop emojis!</p>
+      <p class="tutorial-step">👉 This finger shows how to double-tap to delete!</p>
+      <p class="tutorial-step">🎉 Learn how to use "reset alles" to clear your plan!</p>
+      <p class="tutorial-step">💡 Follow the arrows and animations to understand each feature.</p>
+      <button class="tutorial-close" aria-label="Close tutorial">Got it!</button>
+      <!-- Add animated arrows, finger, ghost overlays here -->
+      <div class="tutorial-arrows"></div>
+      <div class="tutorial-ghost-demo"></div>
+      <div class="tutorial-finger-demo"></div>
+      <!-- Confetti, color grading, bright animations -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
